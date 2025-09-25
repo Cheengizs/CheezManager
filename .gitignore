@@ -1,0 +1,76 @@
+######################################################
+#   .NET / ASP.NET Core
+######################################################
+# Папки сборки
+bin/
+obj/
+[Bb]uild/
+[Ll]ogs/
+[Dd]ebug/
+[Rr]elease/
+x64/
+x86/
+*.exe
+*.dll
+*.pdb
+
+# Конфигурационные файлы локальной разработки
+appsettings.Development.json
+appsettings.*.local.json
+*.secret.json
+
+# Тестовые артефакты
+TestResults/
+*.coverage
+*.coveragexml
+
+# Пакеты NuGet (если вдруг локально)
+*.nupkg
+*.snupkg
+packages/
+
+######################################################
+#   Rider / JetBrains
+######################################################
+.idea/
+*.sln.iml
+# Rider кэш и служебные файлы
+.idea/**/workspace.xml
+.idea/**/tasks.xml
+.idea/**/contentModel.xml
+.idea/**/dataSources/
+.idea/**/dataSources.ids
+.idea/**/dataSources.local.xml
+.idea/**/sqlDataSources.xml
+.idea/**/dynamic.xml
+.idea/**/uiDesigner.xml
+.idea/**/dictionaries
+.idea/**/shelf/
+.idea/**/httpRequests/
+
+######################################################
+#   Общие временные и системные файлы
+######################################################
+*.swp
+*.swo
+*.bak
+*.orig
+*.tmp
+*.log
+*.user
+*.suo
+*.userprefs
+
+# macOS / Windows мусор
+.DS_Store
+Thumbs.db
+
+######################################################
+#   Дополнительно (по желанию)
+######################################################
+# Если используете Secrets Manager, но хотите исключить ключи
+secrets.json
+
+# Если используете локальные сертификаты
+*.pfx
+*.p12
