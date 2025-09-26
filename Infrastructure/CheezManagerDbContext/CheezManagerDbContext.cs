@@ -1,6 +1,22 @@
-﻿namespace Infrastructure.CheezManagerDbContext;
+﻿using Domain.Models;
+using Infrastructure.DbConfiguring;
+using Infrastructure.Entities;
+using Microsoft.EntityFrameworkCore;
 
-public class CheezManagerDbContext
+namespace Infrastructure.CheezManagerDbContext;
+
+public class CheezManagerDbContext : DbContext
 {
+    public CheezManagerDbContext(DbContextOptions<CheezManagerDbContext> options) : base(options){}
     
+    public DbSet<UserEntity> Users { get; set; }
+    public DbSet<GoalEntity> Goals { get; set; }
+    public DbSet<CategoryEntity> Categories { get; set; }
+
+    protected override void OnModelCreating(ModelBuilder modelBuilder)
+    {
+        new GoalEntityTypeConfiguration().Configure(modelBuilder.Entity<GoalEntity>());
+        new CategoryEntityTypeConfiguration().Configure(modelBuilder.Entity<CategoryEntity>());
+        new UserEntityTypeConfiguration().Configure(modelBuilder.Entity<UserEntity>());
+    }
 }
