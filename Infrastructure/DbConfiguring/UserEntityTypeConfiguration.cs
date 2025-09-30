@@ -10,5 +10,18 @@ public class UserEntityTypeConfiguration : IEntityTypeConfiguration<UserEntity>
     {
         builder.
             HasKey(x => x.Id);
+        
+        builder.Property(u => u.Username)
+            .IsRequired()
+            .HasMaxLength(14);
+        
+        builder.Property(u => u.Email)
+            .IsRequired()
+            .HasMaxLength(50);
+
+        builder.Property(u => u.CreatedDate)
+            .HasColumnType("timestamp without time zone")  // тип PostgreSQL
+            .HasDefaultValueSql("NOW()")                   // PostgreSQL автоматически ставит текущую дату/время
+            .ValueGeneratedOnAdd();  
     }
 }

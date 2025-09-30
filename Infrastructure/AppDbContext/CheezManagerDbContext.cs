@@ -3,7 +3,7 @@ using Infrastructure.DbConfiguring;
 using Infrastructure.Entities;
 using Microsoft.EntityFrameworkCore;
 
-namespace Infrastructure.CheezManagerDbContext;
+namespace Infrastructure.AppDbContext;
 
 public class CheezManagerDbContext : DbContext
 {

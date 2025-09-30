@@ -11,7 +11,10 @@ public class GoalEntity
     public int Amount { get;  set; }
     public bool IsCompleted { get;  set; }
     
+    public Guid CategoryId { get; set; }
     public CategoryEntity Category { get;  set; }
+    
+    public Guid UserId { get; set; }
     public UserEntity User { get;  set; }
     
 }
