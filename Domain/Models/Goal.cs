@@ -2,16 +2,16 @@
 
 public class Goal
 {
-    public Guid Id { get; private set; }
-    public string ShortName { get; private set; }
-    public string Description { get; private set; }
-    public DateTime CreatedDate { get; private set; }
-    public DateTime EstimatedEndDate { get; private set; }
-    public DateTime EndDate { get; private set; }
-    public int Amount { get; private set; }
-    public bool IsCompleted { get; private set; }
-    public Category Category { get; private set; }
-    public User User { get; private set; }
+    public Guid Id { get; set; }
+    public string ShortName { get; set; }
+    public string Description { get; set; }
+    public DateTime CreatedDate { get; set; }
+    public DateTime EstimatedEndDate { get; set; }
+    public DateTime EndDate { get; set; }
+    public int Amount { get; set; }
+    public bool IsCompleted { get; set; }
+    public Category Category { get; set; }
+    public User User { get; set; }
     
     public void Complete()
     {

@@ -9,7 +9,7 @@ public class CheezManagerDbContext : DbContext
 {
     public CheezManagerDbContext(DbContextOptions<CheezManagerDbContext> options) : base(options){}
     
-    public DbSet<UserEntity> Users { get; set; }
+    public DbSet<UserEntity?> Users { get; set; }
     public DbSet<GoalEntity> Goals { get; set; }
     public DbSet<CategoryEntity> Categories { get; set; }
 

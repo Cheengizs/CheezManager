@@ -4,9 +4,9 @@ namespace Application.RepositoryInterfaces;
 
 public interface IGoalRepository
 {
-    Task<Goal> FindGoalAsync(Guid goalId);
+    Task<Goal?> FindGoalAsync(Guid goalId);
     Task<List<Goal>> GetAllGoalsAsync(Guid userId);
-    Task CreateGoalAsync(Goal goal);
-    Task DeleteGoalAsync(Guid goalId);
-    Task UpdateGoalAsync(Goal goal);
+    Task<bool> CreateGoalAsync(Goal goal);
+    Task<bool> DeleteGoalAsync(Guid goalId);
+    Task<bool> UpdateGoalAsync(Goal goal);
 }

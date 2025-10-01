@@ -2,9 +2,11 @@
 
 public class User
 {
-    public Guid Id { get; private set; }
-    public string Username { get; private set; }
-    public string PasswordHash { get; private set; }
-    public DateTime CreatedDate { get; private set; }
-    public string? Email { get; private set; }
+    public Guid Id { get; set; }
+    public string Username { get; set; }
+    public string PasswordHash { get; set; }
+    public DateTime CreatedDate { get; set; }
+    public string? Email { get; set; }
+    
+    
 }
