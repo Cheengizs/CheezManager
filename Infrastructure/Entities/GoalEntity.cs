@@ -16,5 +16,4 @@ public class GoalEntity
     
     public Guid UserId { get; set; }
     public UserEntity User { get;  set; }
-    
 }

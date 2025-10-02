@@ -11,13 +11,7 @@ builder.Services.AddDbContext<CheezManagerDbContext>(options =>
     options.UseNpgsql(dbConnectionString);
 });
 
-
-
-
 var app = builder.Build();
-
-
-
 if (app.Environment.IsDevelopment())
 {
     app.MapOpenApi();
